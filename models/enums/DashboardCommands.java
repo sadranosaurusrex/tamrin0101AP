@@ -7,9 +7,11 @@ Explanation:
  */
 public enum DashboardCommands  {
     CreateGroup("create-group\\s+-n\\s+(?<name>.+?)\\s+-t\\s+(?<type>.+?)"),
-    AddExpense("add-expense\\s+-g\\s+(?<groupID>.+?)\\s+-e\\s+(?<equality>.+?)\\s+-t\\s+(?<totalExpense>.+?)\\s+-n\\s+(?<name>.+?)"),
-    //There might be some conditions for expense adding that are not considered yet
-    ShowBalance("show\\s+balance\\s+-u\\s+(?<username.+?>)"),
+    ShowMyGroups("show\\s+my\\s+groups"),
+    AddUser("add-user\\s+-u\\s+(?<username>.+?)\\s+-e\\s+(?<email>.+?)\\s+-g\\s+(?<groupId>.+?)"),
+    AddExpenseEqually("add-expense\\s+-g\\s+(?<groupId>.+?)\\s+-s\\s+equally\\s+-t\\s+(?<totalExpense>.+?)\\s+-n\\s+(?<numUsers>.+?)\\s+(?<userList>([\\w\\d]+\\s*)+)"),
+    AddExpenseUnequally("add-expense\\s+-g\\s+(?<groupId>.+?)\\s+-s\\s+unequally\\s+-t\\s+(?<totalExpense>.+?)\\s+-n\\s+(?<numUsers>.+?)\\s+(?<expenseDetails>([\\w\\d]+\\s+[\\d]+)(?:\\s+[\\w\\d]+\\s+[\\d]+)*)"),
+    ShowBalance("show\\s+balance\\s+-u\\s+(?<username>.+?)"),
     SettleUp("settle-up\\s+-u\\s+(?<username>.+?)\\s+-m\\s+(?<inputMoney>.+?)"),
     GoToProfileMenu("go\\s+to\\s+profile\\s+menu"),
     LogOut("log\\s+out")
@@ -26,3 +28,21 @@ public enum DashboardCommands  {
         return command;
     }
 }
+
+//public enum DashboardCommands {
+//    ShowGroups("show my groups"),
+//    CreateGroup("create-group\\s+-n\\s+(?<name>.+?)\\s+-t\\s+(?<type>.+?)"),
+//    AddUser("add-user\\s+-u\\s+(?<username>.+?)\\s+-e\\s+(?<email>.+?)\\s+-g\\s+(?<groupId>.+?)"),
+//    AddExpenseEqually("add-expense\\s+-g\\s+(?<groupId>.+?)\\s+-s\\s+equally\\s+-t\\s+(?<totalExpense>.+?)\\s+-n\\s+(?<numUsers>.+?)\\s+(?<userList>([\\w\\d]+\\s*)+)"),
+//    AddExpenseUnequally("add-expense\\s+-g\\s+(?<groupId>.+?)\\s+-s\\s+unequally\\s+-t\\s+(?<totalExpense>.+?)\\s+-n\\s+(?<numUsers>.+?)\\s+(?<expenseDetails>([\\w\\d]+\\s+[\\d]+\\s*)+)");
+//
+//    private final String command;
+//
+//    DashboardCommands(String command) {
+//        this.command = command;
+//    }
+//
+//    public String getCommand() {
+//        return command;
+//    }
+//}

@@ -3,7 +3,7 @@ package models.enums;
 public enum GroupType {
     Home ("Home"),
     Trip ("Trip"),
-    Zan_o_bache("Zan_o_bache"),
+    Family("Zan-o-Bache"),
     Other("Other");
 
     private final String displayName;
