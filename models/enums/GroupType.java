@@ -12,10 +12,6 @@ public enum GroupType {
         this.displayName = displayName;
     }
 
-    GroupType() {
-        this.displayName = this.name(); // Default to enum name if no parameter
-    }
-
     public String getDisplayName() {
         return displayName;
     }

@@ -6,5 +6,10 @@ Explanation:
 - notice that this class should not have any input and output and just use it to implement functionalities.
  */
 
+import models.Result;
+
 public class SignUpMenuController {
+    public Result register(String username, String password) {
+        return null;
+    }
 }

@@ -5,6 +5,6 @@ Explanation:
 - We will just use it to end the program.
  */
 
-public class ExitMenu{
+public class ExitMenu implements AppMenu {
 
 }

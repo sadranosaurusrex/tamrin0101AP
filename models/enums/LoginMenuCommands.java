@@ -7,12 +7,6 @@ Explanation:
 - this regexes need some functions, put those functions in here.
  */
 public enum LoginMenuCommands {
-    ShowUserInfo("show\\s+user\\s+info"),
-    ChangeCurrency("change-currency\\s+-n\\s+(?<newCurrency>.+?)"),
-    ChangeUsername("change-username\\s+-n\\s+(?<newUsername>.+?)"),
-    ChangePassword("change-password\\s+-o\\s+(?<oldPassword>.+?)\\s+-n\\s+(?<newPassword>.+?)"),
-    BackToDashboard("back"),
-
     Login("login\\s+-u\\s+(?<username>.+?)\\s+-p\\s+(?<password>.+?)"),
     ForgetPassword("forget-password\\s+-u\\s+(?<username>.+?)\\s+-e\\s+(?<email>.+?)"),
     GoToSignUpMenu("go\\s+to\\s+signup\\s+menu")

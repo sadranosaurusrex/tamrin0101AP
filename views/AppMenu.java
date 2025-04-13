@@ -6,5 +6,8 @@ think about this : menus have some common functions that has different implement
 so we can define an interface for menus and then implement it in each menu.
  */
 
+import java.util.Scanner;
+
 public interface AppMenu {
+    public void check(Scanner scanner);
 }

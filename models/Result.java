@@ -8,4 +8,5 @@ Explanation:
 - It is so simple just put a ... and a ... for it?(what do you think ? (: )
  */
 public record Result() {
+    static String message = new String();
 }

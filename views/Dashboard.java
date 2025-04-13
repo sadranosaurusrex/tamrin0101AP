@@ -6,6 +6,19 @@ Explanation:
 - notice that : this class should not have any logic and just use it to get inputs and handle it to use correct methods in controller.
  */
 
-public class Dashboard {
+import models.enums.DashboardCommands;
 
+import java.util.Scanner;
+import java.util.regex.Matcher;
+
+public class Dashboard implements AppMenu {
+
+    @Override
+    public void check(Scanner scanner) {
+        String command = scanner.nextLine();
+        Matcher matcher;
+//        if (command = Register)
+//            controller.register
+
+    }
 }

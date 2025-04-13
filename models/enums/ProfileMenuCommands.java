@@ -9,7 +9,8 @@ public enum ProfileMenuCommands {
     ShowUserInfo("show\\s+user\\s+info"),
     ChangeCurrency("change-currency\\s+-n\\s+(?<currency>.+?)"),
     ChangeUsername("change-username\\s+-n\\s+(?<newUsername>.+?)"),
-    ChangePassword("change-password\\s+-o\\s+(?<oldPassword>.+?)\\s+-n\\s+(?<newPassword>.+?)");
+    ChangePassword("change-password\\s+-o\\s+(?<oldPassword>\\S+)\\s+-n\\s+(?<newPassword>\\S+)"),
+    BackToDashboard("back");
 
     private final String command;
 
