@@ -16,6 +16,6 @@ public class AppView {
         Scanner scanner = new Scanner(System.in);
         do {
 
-        }while (App.getCurrentMenu() != Menu.ExitMenu);
+        } while (App.getCurrentMenu() != Menu.ExitMenu);
     }
 }

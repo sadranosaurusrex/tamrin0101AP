@@ -7,6 +7,6 @@ Explanation:
 - We use it to communicate between controllers and views to indicate the result of an operation.
 - It is so simple just put a ... and a ... for it?(what do you think ? (: )
  */
-public record Result() {
-    static String message = new String();
+public record Result(boolean value, String message) {
+
 }

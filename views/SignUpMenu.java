@@ -1,6 +1,7 @@
 package views;
 
 import controllers.SignUpMenuController;
+import models.Result;
 import models.enums.SignUpMenuCommands;
 
 import java.util.Scanner;
@@ -11,12 +12,14 @@ public class SignUpMenu implements AppMenu {
 
     @Override
     public void check(Scanner scanner) {
-        String command = scanner.nextLine();
+        String command = scanner.nextLine().trim();
         Matcher matcher;
+        Result result;
         if ((matcher = SignUpMenuCommands.Register.getMatcher(command)).find()) {
-            controller.register(matcher.group("username"), matcher.group("password"));
-        } else if (SignUpMenuCommands.GoToLoginMenu.getMatcher(command).find()) {
-//            controller
+            result = controller.register(matcher.group("username"), matcher.group("password")
+                                , matcher.group("email"), matcher.group("name"));
+        } else if ((matcher = SignUpMenuCommands.GoToLoginMenu.getMatcher(command)).find()) {
+            controller.goToLoginMenu();
         }
     }
 }

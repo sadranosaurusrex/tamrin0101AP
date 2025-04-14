@@ -12,22 +12,18 @@ Explanation:
 - you should put some functions here to manage your data too.
  */
 public class App {
-    ArrayList<Expense> expenses;
-    ArrayList<Group> groups;
-    ArrayList<User> users;
+    public static final ArrayList<Group> groups = new ArrayList<>();
+    public static final ArrayList<User> users = new ArrayList<>();
+    public static final ArrayList<Expense> expenses = new ArrayList<>();
     private static Menu currentMenu = Menu.SignupMenu;
 
-    public App() {
-        users = new ArrayList<>();
-        groups = new ArrayList<>();
-        expenses = new ArrayList<>();
-    }
+    public App() {    }
 
-    public void addUser(User user) {
+    public static void addUser(User user) {
         users.add(user);
     }
 
-    public void addGroup(Group group) {
+    public static void addGroup(Group group) {
         groups.add(group);
     }
 

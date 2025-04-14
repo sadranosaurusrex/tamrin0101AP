@@ -6,6 +6,7 @@ Explanation:
 - notice that : this class should not have any logic and just use it to get inputs and handle it to use correct methods in controller.
  */
 
+import models.Result;
 import models.enums.DashboardCommands;
 
 import java.util.Scanner;

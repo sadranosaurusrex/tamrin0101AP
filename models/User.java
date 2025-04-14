@@ -17,7 +17,7 @@ public class User {
     ArrayList<Expense> expenses = new ArrayList<>();
     Group lastGroup = null;
 
-    User(String name, String username, String password, String email, ArrayList<Expense> expenses, Group lastGroup) {
+    public User(String username, String password, String email, String name, Group lastGroup) {
         this.name = name;
         this.username = username;
         this.password = password;
@@ -34,4 +34,15 @@ public class User {
         expenses.add(expense);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
