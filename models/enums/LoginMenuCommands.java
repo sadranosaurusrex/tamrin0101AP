@@ -1,5 +1,8 @@
 package models.enums;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /*
 Explanation:
 - we have commands in our login menu and this commands need regexes to be checked.
@@ -18,7 +21,7 @@ public enum LoginMenuCommands {
         this.command = command;
     }
 
-    public String getCommand() {
-        return command;
+    public Matcher getMatcher(String input) {
+        return Pattern.compile(command).matcher(input);
     }
 }

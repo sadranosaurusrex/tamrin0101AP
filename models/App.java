@@ -16,6 +16,7 @@ public class App {
     public static final ArrayList<User> users = new ArrayList<>();
     public static final ArrayList<Expense> expenses = new ArrayList<>();
     private static Menu currentMenu = Menu.SignupMenu;
+    private static User currentUser = null;
 
     public App() {    }
 
@@ -33,5 +34,13 @@ public class App {
 
     public static void setCurrentMenu(Menu currentMenu) {
         App.currentMenu = currentMenu;
+    }
+
+    public static User getCurrentUser() {
+        return currentUser;
+    }
+
+    public static void setCurrentUser(User currentUser) {
+        App.currentUser = currentUser;
     }
 }
