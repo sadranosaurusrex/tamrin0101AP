@@ -9,7 +9,7 @@ Explanation:
 - put those regexes here and use them in your code.
 - this regexes need some functions, put those functions in here.
  */
-public enum LoginMenuCommands {
+public enum LoginMenuCommands implements Command {
     Login("login\\s+-u\\s+(?<username>.+?)\\s+-p\\s+(?<password>.+?)"),
     ForgetPassword("forget-password\\s+-u\\s+(?<username>.+?)\\s+-e\\s+(?<email>.+?)"),
     GoToSignUpMenu("go\\s+to\\s+signup\\s+menu")

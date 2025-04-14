@@ -2,7 +2,9 @@ package models.enums;
 
 import views.*;
 
-public enum Menu {
+import java.util.regex.Matcher;
+
+public enum Menu implements Command{
     SignupMenu(new SignUpMenu()),
     LoginMenu(new LoginMenu()),
     ExitMenu(new ExitMenu()),
@@ -17,5 +19,10 @@ public enum Menu {
 
     public AppMenu getMenu() {
         return menu;
+    }
+
+    @Override
+    public Matcher getMatcher(String input) {
+        return null;
     }
 }

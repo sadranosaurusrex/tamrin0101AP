@@ -5,7 +5,9 @@ Explanation:
 - Enum representing commands available in the profile menu.
 */
 
-public enum ProfileMenuCommands {
+import java.util.regex.Matcher;
+
+public enum ProfileMenuCommands implements Command{
     ShowUserInfo("show\\s+user\\s+info"),
     ChangeCurrency("change-currency\\s+-n\\s+(?<currency>.+?)"),
     ChangeUsername("change-username\\s+-n\\s+(?<newUsername>.+?)"),
@@ -20,5 +22,10 @@ public enum ProfileMenuCommands {
 
     public String getCommand() {
         return command;
+    }
+
+    @Override
+    public Matcher getMatcher(String input) {
+        return null;
     }
 }

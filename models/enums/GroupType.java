@@ -1,6 +1,8 @@
 package models.enums;
 
-public enum GroupType {
+import java.util.regex.Matcher;
+
+public enum GroupType implements Command{
     Home ("Home"),
     Trip ("Trip"),
     Family("Zan-o-Bache"),
@@ -14,5 +16,10 @@ public enum GroupType {
 
     public String getDisplayName() {
         return displayName;
+    }
+
+    @Override
+    public Matcher getMatcher(String input) {
+        return null;
     }
 }

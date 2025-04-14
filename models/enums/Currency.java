@@ -7,7 +7,9 @@ Explanation:
 - each currency has some data, put them here and use some methods to work with currencies so simply.
  */
 
-public enum Currency {
+import java.util.regex.Matcher;
+
+public enum Currency implements Command{
     GTC(10),
     QTR(2),
     SUD(5);
@@ -24,6 +26,11 @@ public enum Currency {
 
     public int getValue() {
         return value;
+    }
+
+    @Override
+    public Matcher getMatcher(String input) {
+        return null;
     }
 }
 

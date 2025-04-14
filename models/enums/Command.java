@@ -6,5 +6,8 @@ Explanation:
 - but after all they are all commands and we can write some part of their code once here (:
  */
 
+import java.util.regex.Matcher;
+
 public interface Command {
+    Matcher getMatcher(String input);
 }
